@@ -1,15 +1,9 @@
-
-const maxHearts = 5; 
-
+let heartCount = 0; 
+const maxHearts = 50; 
 
 function createHeart() {
     
-    const currentHearts = document.querySelectorAll('.heart').length;
-
-   
-    if (currentHearts >= maxHearts) {
-        return;
-    }
+    if (heartCount >= maxHearts) return;
 
     let heart = document.createElement('div');
     heart.classList.add('heart');
@@ -21,14 +15,16 @@ function createHeart() {
 
     heart.style.left = randomX + 'px';
     heart.style.top = randomY + 'px';
-    heart.style.animationDuration = Math.random() * 5 + 5 + 's'; 
-    heart.style.fontSize = Math.random() * 20 + 20 + 'px'; 
+    heart.style.animationDuration = Math.random() * 5 + 5 + 's';
+    heart.style.fontSize = Math.random() * 20 + 20 + 'px';
 
     document.body.appendChild(heart);
+    heartCount++; 
 
     
     setTimeout(() => {
         heart.remove();
+        heartCount--; 
     }, parseFloat(heart.style.animationDuration) * 1000);  
 }
 
