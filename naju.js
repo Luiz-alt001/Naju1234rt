@@ -1,5 +1,5 @@
 
-const maxHearts = 50; 
+const maxHearts = 5; 
 
 
 function createHeart() {
