@@ -3,7 +3,7 @@ function createHeart() {
     heart.classList.add('heart');
     heart.innerText = '❤️';
     const randomX = Math.random() * window.innerWidth;
-    const randomY = Math.random() * (window.innerHeight * 2);
+    const randomY = Math.random() * (window.innerHeight);
     heart.style.left = randomX + 'px';
     heart.style.top = randomY + 'px';
     heart.style.animationDuration = Math.random() * 5 + 5 + 's';
