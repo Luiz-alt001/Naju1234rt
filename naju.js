@@ -35,7 +35,6 @@ function startCreatingHearts() {
 
 startCreatingHearts();
 
-
 // Efeito de digitação
 const text = `Obrigado por ser a melhor pessoa do mundo 💖
 Não se importe muito com a estrutura desse "site", codei com sono em menos de 1h 😴
@@ -51,6 +50,7 @@ function typeWriter() {
     }
 }
 typeWriter();
+
 function atualizarContador() {
     const dataPrimeiroBeijo = new Date(2025, 2, 14); // Março é mês 2 (Janeiro = 0)
     const hoje = new Date();
@@ -59,7 +59,7 @@ function atualizarContador() {
     const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
 
     const contadorDiv = document.getElementById('contadorDias');
-    contadorDiv.innerHTML = `💞 Estamos juntos há <strong>${dias}</strong> dias desde nosso primeiro beijo! eu te amo meu amor 💞`;
+    contadorDiv.innerHTML = `💞 Estamos juntos há <strong>${dias}</strong> dias desde nosso primeiro beijo! Eu te amo, meu amor 💞`;
 }
 
 let slideIndex = 0;
